@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: local('BookmanOldStyle'), local('BookmanOldStyle'),
+        url('../fonts/bookmanoldstyle.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: local('BookmanOldStyle-Bold'), local('BookmanOldStyle-Bold'),
+        url('../fonts/bookmanoldstyle_bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}

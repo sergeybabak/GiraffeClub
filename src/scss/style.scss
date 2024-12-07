@@ -1,0 +1,22 @@
+@use './libs/bootstrap-reboot.min';
+@use './base/fonts';
+@use './blocks/promo';
+//@use 'base/mixins';
+
+* {
+    font-family: 'Bookman Old Style', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-color: #DE742BE6;
+}
+.container {
+    padding: 0 120px;
+}
+
+
+//@import 'blocks/titles';
+//@import 'blocks/media';
+

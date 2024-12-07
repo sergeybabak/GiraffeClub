@@ -1,0 +1,39 @@
+.promo {
+    min-height: 1080px;
+    background-color: var(--main-color);
+}
+
+.header {
+    padding: 45px 0 35px 0;
+    border-bottom: 2px solid #FCFCFC;
+    &__wrapper {
+        display: flex;
+    justify-content: space-between;
+    }
+    &__menu {
+        align-self: end;
+        transition: all 2s;
+        & ul {
+            display: flex;
+            gap: 33px;
+            list-style-type: none;
+            margin: 0;
+            & a {
+                font-size: 26px;
+                color: #000;
+                transition: all 0.5s;
+                &:hover {
+                    text-decoration: none;
+                    color: #FCFCFC;
+                }
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        gap: 24px;
+        & img {
+            max-height: 40px;
+        }
+    }
+}
