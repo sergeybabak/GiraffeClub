@@ -1,11 +1,34 @@
 .promo {
     min-height: 1080px;
-    background-color: var(--main-color);
+    background-color: var(--back-orange);
+    &__wrapper {
+        margin-top: 91px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        margin-top: 63px;
+        font-size: 90px;
+        font-weight: 600;
+        line-height: 106px;
+        text-align: left;
+    }
+    &__subtitle {
+        margin-top: 24px;
+        text-align: left;
+        max-width: 875px;
+    }
+    &__btn {
+        margin-top: 91px;
+    }
+    &__img {
+        max-width: 540px;
+    }
 }
 
 .header {
     padding: 45px 0 35px 0;
-    border-bottom: 2px solid #FCFCFC;
+    border-bottom: 2px solid var(--back-white);
     &__wrapper {
         display: flex;
     justify-content: space-between;
@@ -31,9 +54,33 @@
     }
     &__social {
         display: flex;
+        justify-content: end;
+        align-items: center;
         gap: 24px;
-        & img {
+        & a {
+            max-width: 40px;
             max-height: 40px;
+            & svg {
+                width: 100%;
+                height: 100%;
+            }
+            &:hover {
+                .svg_phone path {
+                    stroke: #FCFCFC;
+                }
+                .svg_mail path {
+                    fill: #FCFCFC;
+                }
+                .svg_mail rect {
+                    stroke: #FCFCFC;
+                }
+                .svg_location path {
+                    fill: #FCFCFC;
+                }
+                .svg_location circle {
+                    stroke: #FCFCFC;
+                }
+            }
         }
     }
 }

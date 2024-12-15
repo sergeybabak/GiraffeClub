@@ -65,7 +65,7 @@ gulp.task('html', () => {
 
 // Изображения
 gulp.task('images', () => {
-  return gulp.src('src/img/**/*')
+  return gulp.src('src/img/**/*', { encoding: false })
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img'));
 });

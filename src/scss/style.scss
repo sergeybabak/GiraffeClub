@@ -1,5 +1,6 @@
 @use './libs/bootstrap-reboot.min';
 @use './base/fonts';
+@use './blocks/elements';
 @use './blocks/promo';
 //@use 'base/mixins';
 
@@ -10,13 +11,17 @@
     padding: 0;
 }
 :root {
-    --main-color: #DE742BE6;
+    // --main-color: #DE742BE6;
+    --back-white: #fcfcfc;
+    --back-orange: rgba(222, 116, 43, 0.9);
+    --button-orange: #DF803E;
+    --button-grey: #C9C9C9;
+    --text-orange: #DF803E;
+    --text-grey: #5C5C5C;
 }
 .container {
     padding: 0 120px;
 }
 
-
 //@import 'blocks/titles';
 //@import 'blocks/media';
-
