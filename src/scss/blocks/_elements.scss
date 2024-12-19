@@ -21,6 +21,7 @@
     height: 100vh;
     background: rgba(0, 0, 0, 0.7); //для прозрачного заднего фона
     transition: opacity 1s ease-in-out;
+    z-index: 2;
     &__window {
         position: relative;
         width: 550px;
@@ -48,6 +49,11 @@
             border: none;
             border-bottom: 2px solid rgb(0, 0, 0);
             font-size: 26px;
+            background-color: var(--back-white);
+            &:focus {
+                outline: none;
+                background-color: var(--back-white);
+            }
         }
     }
     &__btn {
@@ -74,4 +80,7 @@
 .visible {
     opacity: 1;
     pointer-events: auto;
+}
+.none {
+    display: none;
 }
