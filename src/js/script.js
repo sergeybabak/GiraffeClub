@@ -53,4 +53,12 @@ form.addEventListener('submit', (event) => {
     visibleElement(2);
 });
 
+const hamburger = document.querySelector('.hamburger'),
+      menu = document.querySelector('.header__menu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('hamburger__active');
+    menu.classList.toggle('header__menu-active')
+});
+
 

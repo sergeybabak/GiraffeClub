@@ -73,7 +73,7 @@ gulp.task('images', () => {
 // Иконки
 gulp.task('icons', () => {
 	return gulp
-		.src("src/icons/**/*")
+		.src("src/icons/**/*", { encoding: false })
 		.pipe(gulp.dest("dist/icons"))
 		.pipe(browserSync.stream());
 });

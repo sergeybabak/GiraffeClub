@@ -84,3 +84,19 @@
 .none {
     display: none;
 }
+// заголовок в каждом разделе
+.chapter {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    &__section {
+        font-size: 26px;
+        font-weight: 600;
+        color: var(--text-orange);
+    }
+    &__text {
+        font-size: 50px;
+        font-weight: 300;
+        line-height: 130%;
+        text-align: center;
+    }
+}

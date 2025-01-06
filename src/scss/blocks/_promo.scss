@@ -2,6 +2,9 @@
     position: relative;
     min-height: 1080px;
     background-color: var(--back-orange);
+    overflow: hidden;
+    padding: 0;
+    // height: 100vw;
     &__wrapper {
         margin-top: 91px;
         display: flex;
@@ -23,7 +26,8 @@
         margin-top: 91px;
     }
     &__img {
-        max-width: 540px;
+        // max-width: 540px;
+        max-height: 760px;
         z-index: 1;
     }
 }
@@ -31,13 +35,14 @@
 .header {
     padding: 45px 0 35px 0;
     border-bottom: 2px solid var(--back-white);
+    min-height: 104px;
     &__wrapper {
         display: flex;
     justify-content: space-between;
     }
     &__menu {
         align-self: end;
-        transition: all 2s;
+        transition: all 1s;
         z-index: 1;
         & ul {
             display: flex;
@@ -88,7 +93,42 @@
         }
     }
 }
+.hamburger {
+    justify-items: end;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+    span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: #000;
+        transition: all 1s;
+        &:nth-child(2) {
+            width: 27px;
+            margin: 8px 0;
+        }
+    }
+    &__active {
+        span {
+            width: 30px;
+        }
+        span:nth-child(1) {
+            margin-top: 10px;
+            transform: rotate(-45deg) translateX(-1px);
+        }
+        span:nth-child(3) {
+            transform: rotate(45deg) translateX(-1px);
+        }
+        span:nth-child(2) {
+            display: none;
+        }
+    }
+}
 
+.header .header__menu-active {
+    left: 0;
+}
 .triangle {
     position: absolute;
     width: 0;
