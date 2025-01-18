@@ -24,6 +24,10 @@
     }
     &__btn {
         margin-top: 91px;
+        border: none;
+        &:hover {
+            color: var(--text-orange);
+        }
     }
     &__img {
         // max-width: 540px;

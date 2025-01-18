@@ -1,0 +1,57 @@
+.offers {
+    position: relative;
+    min-height: 1300px;
+    background-color: var(--back-orange);
+    .chapter__section {
+        color: var(--back-white);
+    }
+    .chapter__text {
+        color: #000;
+    }
+    &__wrapper {
+        margin-top: 64px;
+        display: flex;
+        // grid-template-columns: 1fr 824px 1fr;
+        align-items: end;
+        justify-content: space-between;
+    }
+    &__item {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        gap: 35px;
+        font-size: 34px;
+        border-top: 2px solid #000;
+        cursor: pointer;
+        transition: all 0.5s;
+        &:last-child {
+            border-bottom: 2px solid #000;
+        }
+/*         &:hover {
+            text-decoration: none;
+            color: #837b7b;
+        } */
+    }
+    &__btn {
+        display: block;
+        margin: 64px auto 0 auto;
+        background-color: inherit;
+        width: 312px;
+        height: 71px;
+        &:hover {
+            background-color: var(--back-white);
+            color: var(--text-orange);
+            border: none;
+        }
+    }
+}
+.giraffe {
+    width: 418px;
+    height: 590px;
+}
+.white {
+    color: #fff;
+}
+.grey {
+    color: #c0b3b3c9;
+}

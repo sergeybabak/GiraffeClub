@@ -35,6 +35,12 @@
     .chapter__text {
         font-size: 40px;
     }
+    .offers__item {
+        font-size: 30px;
+    }
+    .giraffe2 {
+        display: none;
+    }
 }
 @media (max-width: 1200px) {
     .header__wrapper {
@@ -107,6 +113,9 @@
             max-height: 180px;
         }
     }
+    .offers__item {
+        font-size: 26px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -125,12 +134,48 @@
             max-height: 150px;
         }
     }
+    .offers {
+        padding-bottom: 200px;
+    }
+    .giraffe {
+        width: 159px;
+        height: 225px;
+    }
+    .giraffe1 {
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+    }
+    .giraffe2 {
+        display: block;
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+    }
 }
 
 @media (max-width: 768px) {
     .container {
         padding: 0 40px;
     }
+    section {
+        padding: 50px 0 65px 0;
+    }
+    .offers {
+        padding-bottom: 0;
+    }
+    .giraffe1 {
+        left: -10px;
+        bottom: -140px;
+    }
+    .giraffe2 {
+        right: -10px;
+        bottom: -100px;
+    }
+/*     .offers__btn {
+        width: 155px;
+        height: 36px;
+    } */
 }
 
 @media (max-width: 576px) {
@@ -179,5 +224,27 @@
             max-width: 66px;
             max-height: 66px;
         }
+    }
+    .offers {
+        min-height: inherit;
+        padding-bottom: 65px;
+    }
+    .offers__wrapper {
+        margin-top: 27px;
+    }
+    .offers__item {
+        font-size: 16px;
+        gap: 8px;
+    }
+    .circle_num {
+        min-width: 36px;
+        min-height: 36px;
+        font-size: 16px;
+    }
+    .offers__btn {
+        margin-top: 24px;
+        height: 36px;
+        width: 155px;
+        font-size: 14px;
     }
 }
