@@ -52,10 +52,14 @@
             border: none;
             border-bottom: 2px solid rgb(0, 0, 0);
             font-size: 26px;
-            background-color: var(--back-white);
+            background-color: transparent;
+            &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 1000px white inset !important;
+                box-shadow: 0 0 0 1000px white inset !important;
+                background-color: white !important;
+            }
             &:focus {
                 outline: none;
-                background-color: var(--back-white);
             }
         }
     }
@@ -107,6 +111,7 @@
 .giraffe {
     background: url('../img/Giraffe.png') center bottom / contain no-repeat;
 }
+// кружочек с цифрой
 .circle_num {
     min-width: 66px;
     min-height: 66px;
@@ -116,4 +121,18 @@
     justify-content: center;
     align-items: center;
     font-size: 34px;
+}
+// пункт с кружочком с цифрой
+.item_circle_num {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    font-size: 34px;
+    // border-top: 2px solid #000;
+    // cursor: pointer;
+    // transition: all 0.5s;
+    // &:last-child {
+    //     border-bottom: 2px solid #000;
+    // }
 }

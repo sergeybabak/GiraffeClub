@@ -96,6 +96,9 @@
             }
         }
     }
+    &__title, &__giraffe, &__devider {
+        display: none;
+    }
 }
 .hamburger {
     justify-items: end;

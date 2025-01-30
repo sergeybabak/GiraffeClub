@@ -16,21 +16,12 @@
         justify-content: space-between;
     }
     &__item {
-        padding: 20px 0;
-        display: flex;
-        align-items: center;
-        gap: 35px;
-        font-size: 34px;
         border-top: 2px solid #000;
         cursor: pointer;
         transition: all 0.5s;
         &:last-child {
             border-bottom: 2px solid #000;
         }
-/*         &:hover {
-            text-decoration: none;
-            color: #837b7b;
-        } */
     }
     &__btn {
         display: block;

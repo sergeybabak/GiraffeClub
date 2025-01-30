@@ -18,6 +18,15 @@
     .about__wrapper {
         justify-content: space-around;
     }
+    .education__wrapper {
+        grid-template: repeat(2, auto) / 380px auto;
+    }
+    .education__img {
+        align-self: self-end;
+    }
+    .education__items {
+        gap: 50px;
+    }
 }
 @media (max-width: 1400px) {
     .header__menu ul {
@@ -41,6 +50,17 @@
     .giraffe2 {
         display: none;
     }
+    .education__wrapper {
+        gap: 60px 40px;
+    }
+    .education__item p {
+        font-size: 20px;
+        margin-left: 87px;
+    }
+    .item_circle_num {
+        gap: 20px;
+        font-size: 28px;
+    }
 }
 @media (max-width: 1200px) {
     .header__wrapper {
@@ -50,7 +70,7 @@
         position: fixed;
         top: 0;
         left: -100%;
-        width: 70%;
+        width: 100%;
         height: 100vh;
         background-color: var(--back-white);
         padding: 138px 24px 24px 24px;
@@ -62,6 +82,7 @@
     }
     .hamburger {
         display: block;
+        z-index: 3;
     }
     .promo {
         min-height: 640px;
@@ -101,6 +122,9 @@
     .chapter {
         grid-template-columns: 1fr;
     }
+    .chapter__text {
+        margin-top: 24px;
+    }
     .about__wrapper {
         grid-template-columns: repeat(auto-fit, 360px);
         gap: 40px 55px;
@@ -115,6 +139,38 @@
     }
     .offers__item {
         font-size: 26px;
+    }
+    .education__wrapper {
+        grid-template-columns: 1fr;
+    }
+    .education__descr {
+        .chapter__text {
+            margin-top: 24px;
+        }
+        .item_circle_num {
+            padding: 16px 0 0 0;
+        }
+        .item__first {
+            padding: 24px 0 0 0;
+        }
+    }
+    .education__img {
+        grid-row: 3;
+        margin-top: inherit;
+    }
+    .education__formats {
+        grid-column: inherit;
+    }
+    .education__items {
+        flex-direction: column;
+        gap: inherit;
+        margin-top: 20px;
+    }
+    .education__item p {
+        font-size: 26px;
+    }
+    .text_left {
+        text-align: center;
     }
 }
 
@@ -172,22 +228,30 @@
         right: -10px;
         bottom: -100px;
     }
-/*     .offers__btn {
-        width: 155px;
-        height: 36px;
-    } */
 }
 
 @media (max-width: 576px) {
     .container {
         padding: 0 15px;
     }
+    .message__window {
+        padding: 80px 40px;
+        width: 400px;
+        p {
+            font-size: 24px;
+        }
+    }
+    .message__form {
+        input {
+            font-size: 16px;
+        }
+    }
     .header__menu {
         width: 100%;
     }
-    .hamburger {
+    /* .hamburger {
         z-index: 3;
-    }
+    } */
     .promo__title {
         font-size: 50px;
     }
@@ -246,5 +310,17 @@
         height: 36px;
         width: 155px;
         font-size: 14px;
+    }
+    .education__wrapper {
+        gap: 32px;
+    }
+    .education__item p {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .education {
+        .item_circle_num {
+            font-size: 20px;
+        }
     }
 }

@@ -95,11 +95,16 @@ offers__item.forEach(item => {
 });
 
 const hamburger = document.querySelector('.hamburger'),
-      menu = document.querySelector('.header__menu');
+      menu = document.querySelector('.header__menu')
+    //   , headerTitle = document.querySelector('.header__title')
+;
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('hamburger__active');
-    menu.classList.toggle('header__menu-active')
+    menu.classList.toggle('header__menu-active');
+    // headerTitle.style.display = 'inherit';
+    if (hamburger.classList.contains('hamburger__active')) window.addEventListener('wheel', preventScroll, { passive: false })
+    else window.removeEventListener('wheel', preventScroll, { passive: false });
 });
 
 
