@@ -67,21 +67,24 @@
         justify-content: end;
     }
     .header__menu {
-        position: fixed;
-        top: 0;
-        left: -100%;
+        // position: fixed;
+        // top: 0;
+        // left: -100%;
+        grid-column: 1/2;
         width: 100%;
         height: 100vh;
-        background-color: var(--back-white);
+        // background-color: var(--back-white);
         padding: 138px 24px 24px 24px;
         z-index: 3;
         ul {
             flex-direction: column;
         }
-        // display: none;
+        display: none;
     }
     .hamburger {
         display: block;
+        grid-row: 1;
+        grid-column: 2/2;
         z-index: 3;
     }
     .promo {
@@ -100,15 +103,18 @@
         margin-top: 8px;
         max-width: inherit;
     }
+    .promo__descr {
+        width: 100%;
+    }
     .promo__btn {
         display: block;
         margin: 0 auto;
         margin-top: 35px;
     }
-    .promo__img {
-        margin: 0 auto;
-        max-height: 450px;
-    }
+    // .promo__img {
+    //     margin: 0 auto;
+    //     max-height: 450px;
+    // }
     .triangle {
         right: inherit;
         top: inherit;
@@ -193,20 +199,20 @@
     .offers {
         padding-bottom: 200px;
     }
-    .giraffe {
-        width: 159px;
-        height: 225px;
-    }
     .giraffe1 {
         position: absolute;
         left: 50px;
         bottom: 50px;
+        width: 159px;
+        height: 225px;
     }
     .giraffe2 {
         display: block;
         position: absolute;
         right: 50px;
         bottom: 50px;
+        width: 159px;
+        height: 225px;
     }
 }
 
@@ -246,25 +252,45 @@
             font-size: 16px;
         }
     }
-    .header__menu {
-        width: 100%;
+    .header__full {
+        & .header__title {
+            font-size: 32px;
+            align-self: end;
+        }
+        & .header__menu {
+            width: 100%;
+            text-align: left;
+            & ul {
+                gap: 24px;
+                & li a {
+                    font-size: 21px;
+                }
+            }
+            & .header__giraffe {
+                height: 195px;
+            }
+        }
     }
-    /* .hamburger {
-        z-index: 3;
-    } */
+    .promo__wrapper {
+        height: auto;
+     }
     .promo__title {
         font-size: 50px;
     }
     .promo__subtitle {
         font-size: 30px;
     }
-    .promo__img {
-        max-height: 140px;
-    }
+    // .promo__img {
+    //     max-height: 140px;
+    // }
     .promo__btn {
         width: 191px;
         height: 36px;
         font-size: 14px;
+    }
+    .giraffe_promo {
+        width: 140px;
+        height: 195px;
     }
     .triangle {
         border-bottom: 25vh solid var(--back-white);

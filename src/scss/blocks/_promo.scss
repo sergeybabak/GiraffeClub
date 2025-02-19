@@ -4,11 +4,14 @@
     background-color: var(--back-orange);
     overflow: hidden;
     padding: 0;
+    padding-bottom: 50px;
     // height: 100vw;
     &__wrapper {
         margin-top: 91px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        height: 760px;
     }
     &__title {
         margin-top: 63px;
@@ -22,6 +25,9 @@
         text-align: left;
         max-width: 875px;
     }
+    &__descr {
+        width: 50%;
+    }
     &__btn {
         margin-top: 91px;
         border: none;
@@ -29,13 +35,7 @@
             color: var(--text-orange);
         }
     }
-    &__img {
-        // max-width: 540px;
-        max-height: 760px;
-        z-index: 1;
-    }
 }
-
 .header {
     padding: 45px 0 35px 0;
     border-bottom: 2px solid var(--back-white);
@@ -100,6 +100,60 @@
         display: none;
     }
 }
+.giraffe_promo {
+    width: 539px;
+    height: 761px;
+    z-index: 1;
+}
+
+.header__full {
+    position: fixed;
+    padding: 20px 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--back-white);
+    z-index: 2;
+    .header__wrapper {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 10fr 1fr;
+        align-items: center;
+    }
+    .header__title {
+        display: inherit;
+        font-size: 46px;
+        font-weight: 600;
+        align-self: end;
+    }
+    .header {
+        &__menu ul a:hover {
+            color: rgb(141, 133, 133);
+        }
+        &__title, &__giraffe, &__devider {
+            display: inherit;
+        }
+    }
+    .header__divider {
+        border: 1px solid rgb(223, 128, 62);
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 100px;
+    }
+    .header__menu {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        text-align: center;
+        & ul li a {
+            font-size: 36px;
+        }
+    }
+    .header__giraffe {
+        height: 400px;
+    }
+}
 .hamburger {
     justify-items: end;
     cursor: pointer;
@@ -131,10 +185,6 @@
             display: none;
         }
     }
-}
-
-.header .header__menu-active {
-    left: 0;
 }
 .triangle {
     position: absolute;

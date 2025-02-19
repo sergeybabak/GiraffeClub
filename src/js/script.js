@@ -95,16 +95,29 @@ offers__item.forEach(item => {
 });
 
 const hamburger = document.querySelector('.hamburger'),
-      menu = document.querySelector('.header__menu')
+      header = document.querySelector('.header'),
+      mainMenu = document.querySelectorAll('.header__menu ul li a')
     //   , headerTitle = document.querySelector('.header__title')
 ;
 
+function showMenu() {
+    if (hamburger.classList.contains('hamburger__active')) {
+        header.classList.remove('header__full');
+        hamburger.classList.remove('hamburger__active');
+        window.removeEventListener('wheel', preventScroll, { passive: false })
+    }
+}
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('hamburger__active');
-    menu.classList.toggle('header__menu-active');
+    header.classList.toggle('header__full');
     // headerTitle.style.display = 'inherit';
     if (hamburger.classList.contains('hamburger__active')) window.addEventListener('wheel', preventScroll, { passive: false })
     else window.removeEventListener('wheel', preventScroll, { passive: false });
 });
 
+mainMenu.forEach(item => {
+    item.addEventListener('click', () => {
+        showMenu();
+    });
+})
 
