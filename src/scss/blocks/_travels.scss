@@ -1,0 +1,72 @@
+.chapter__section {
+    color: #000;
+}
+.travels__descr {
+    margin-top: 48px;
+    font-size: 34px;
+    font-weight: 300;
+}
+.travels__wrapper {
+    margin-top: 48px;
+    display: grid;
+    // grid-template-columns: 410px 608px 154px 132px 408px;
+    // grid-template-rows: 392px 108px 284px 196px;
+    grid-template-columns: minmax(0, 410px) minmax(0, 523px) minmax(0, 136px) minmax(0, 132px) minmax(0, 408px);
+    // grid-template-rows: minmax(0, 392px) minmax(0, 88px) minmax(0, 284px) minmax(0, 196px);
+    grid-auto-rows: min-content;
+    gap: 20px;
+    // align-items: stretch;
+    & div {
+        border-radius: 14px;
+        // width: 100%;
+        // height: 100%;
+        // border: 3px solid black;
+    }
+    .img01 {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        aspect-ratio: 410/500;
+        background: url('../img/travels/travel_001.png') center center / cover no-repeat;
+    }
+    .img02 {
+        grid-column: 2/4;
+        grid-row: 1/2;
+        aspect-ratio: 670/392;
+        background: url('../img/travels/travel_002.png') center center / cover no-repeat;
+    }    
+    .img03 {
+        grid-column: 4/6;
+        // aspect-ratio: 560/392;
+        background: url('../img/travels/travel_003.png') center center / cover no-repeat;
+    }
+    .img04 {
+        grid-column: 1/2;
+        grid-row: 3/5;
+        aspect-ratio: 410/500;
+        background: url('../img/travels/travel_004.png') center center / cover no-repeat;
+    }
+    .img05 {
+        grid-column: 2/3;
+        grid-row: 2/5;
+        // aspect-ratio: 514/608;
+        background: url('../img/travels/travel_005.png') center center / cover no-repeat;
+    }
+    .img06 {
+        grid-column: 3/6;
+        grid-row: 2/4;
+        // aspect-ratio: 716/392;
+        background: url('../img/travels/travel_006.png') center center / cover no-repeat;
+    }
+    .img07 {
+        grid-column: 3/5;
+        grid-row: 4/5;
+        // aspect-ratio: 288/196;
+        background: url('../img/travels/travel_007.png') center center / cover no-repeat;
+    }
+    .img08 {
+        grid-column: 5/6;
+        grid-row: 4/5;
+        aspect-ratio: 408/196;
+        background: url('../img/travels/travel_008.png') center center / cover no-repeat;
+    }
+}
