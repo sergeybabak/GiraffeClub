@@ -230,6 +230,11 @@
             //  background: url('../img/travels/travel_008.png') center center / cover no-repeat;
         }
     }
+    .slider__item {
+        // соотношение 1,7
+        max-width: 320px;
+        max-height: 548px;
+    }
 }
 
 @media (max-width: 992px) {

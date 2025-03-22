@@ -100,28 +100,75 @@
 
     @@include('blocks/education.html')
 
-    <section class="travels" id="travels">
+    @@include('blocks/travels.html')
+
+    <section class="team">
         <div class="container">
             <div class="chapter">
-                <div class="chapter__section">Наші подорожі</div>
-                <div class="chapter__text text_left">Ми подорожуємо світом</div>
+                <div class="chapter__section">Наша команда</div>
+                <div class="chapter__text">Найкраща команда - найкращі результати</div>
             </div>
-            <div class="travels__descr">
-                Лондон, Греція, Болгарія, Польша, різні міста України.<br><br>Гарною традицією «GiraffeClub» стали освітні подорожі студентів в різні країни. Окрім вивчення англійської й покращення практичних навичок мови у спеціалізованих мовних центрах світу, програми поїздок передбачають щоденні розваги й екскурсії.
-            </div>
-            <div class="travels__wrapper">
-                <div class="img01"></div>
-                <div class="img02"></div>
-                <div class="img03"></div>
-                <div class="img04"></div>
-                <div class="img05"></div>
-                <div class="img06"></div>
-                <div class="img07"></div>
-                <div class="img08"></div>
+
+            <div class="slider">
+                <div class="arrow_left">
+                    <div class="arrow_wrap">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="slider__wrapper">
+                    <div class="slider__item">
+                        <div class="slider__item-img img01"></div>
+                        <!-- <img src="img/item/ph01.jpeg" alt="01" class="slider__item-img"> -->
+                        <div class="slider__item-descr">
+                            <div class="descr_name">Валерія Звіранська</div>
+                            <div class="descr_position">Адміністратор</div>
+                        </div>
+                    </div>
+                    <div class="slider__item slider__item-great">
+                        <div class="slider__item-img img02"></div>
+                        <!-- <img src="img/item/ph02.jpeg" alt="02" class="slider__item-img"> -->
+                        <div class="slider__item-descr">
+                            <div class="descr_name">Ольга Мануйлова</div>
+                            <div class="descr_position">Засновниця школи.</div>
+                            <div class="descr_text">Має вищу педагогічну освіту.
+                                Її профіль: германські мови. Перекладач <br> Викладацький стаж: 22 роки</div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="slider__item-img img03"></div>
+                        <!-- <img src="img/item/ph03.jpeg" alt="03" class="slider__item-img"> -->
+                        <div class="slider__item-descr">
+                            <div class="descr_name">Наталія Шмалько</div>
+                            <div class="descr_position">Адміністратор</div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="slider__item-img img04"></div>
+                        <!-- <img src="img/item/ph04.jpg" alt="04" class="slider__item-img"> -->
+                        <div class="slider__item-descr">
+                            <div class="descr_name">Анастасія Бабак</div>
+                            <div class="descr_position">Викладач</div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="slider__item-img img05"></div>
+                        <!-- <img src="img/item/ph05.jpg" alt="04" class="slider__item-img"> -->
+                        <div class="slider__item-descr">
+                            <div class="descr_name">Катерина Хілл</div>
+                            <div class="descr_position">Викладач</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow_rigth">
+                    <div class="arrow_wrap">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    
-    <script src="js/script.js"></script>
+
+    <!-- <script src="js/tiny-slider.js"></script>     -->
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
