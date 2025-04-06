@@ -139,3 +139,87 @@ html {
     //     border-bottom: 2px solid #000;
     // }
 }
+// стрелки для карусели
+.arrow_left {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
+    height: 106px;
+    border: 2px solid var(--back-white);
+    border-radius: 100%;
+    cursor: pointer;
+    .arrow_wrap {
+        position: absolute;
+        width: 60px;
+        height: 46px;
+        
+        span {
+            display: block;
+            height: 2px;
+            background-color: var(--back-white);
+            left: 0;
+            top: 50%;
+            position: absolute;
+            &:first-child {
+                width: 30px;
+                rotate: -45deg;
+                top: 27%;
+                left: -4px;
+            }
+            &:nth-child(2) {
+                width: 60px;
+                // transform: translateY(50%);
+            }
+            &:last-child {
+                width: 30px;
+                rotate: 45deg;
+                top: 71%;
+                left: -4px;
+            }
+        }
+    }
+}
+.arrow_rigth {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 106px;
+    height: 106px;
+    border: 2px solid var(--back-white);
+    border-radius: 100%;
+    justify-self: end;
+    cursor: pointer;
+    .arrow_wrap {
+        position: absolute;
+        width: 60px;
+        height: 46px;
+        
+        span {
+            display: block;
+            height: 2px;
+            background-color: var(--back-white);
+            right: 0;
+            top: 50%;
+            position: absolute;
+            &:first-child {
+                width: 30px;
+                rotate: -45deg;
+                top: 71%;
+                right: -4px;
+            }
+            &:nth-child(2) {
+                width: 60px;
+                // transform: translateY(50%);
+            }
+            &:last-child {
+                width: 30px;
+                rotate: 45deg;
+                top: 27%;
+                right: -4px;
+            }
+        }
+    }
+}

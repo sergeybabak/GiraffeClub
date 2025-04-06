@@ -124,6 +124,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const exampleCarousel = new Carousel('.slider__wrapper', '.arrow_left', '.arrow_rigth');
-    window.addEventListener("resize", () => exampleCarousel.initPosition());
+    const stylesCentralItem = {
+        'transform': 'scale(1.12)'
+    };
+    const exampleCarousel = new Carousel('.slider__wrapper', '.arrow_left', '.arrow_rigth', stylesCentralItem);
+    window.addEventListener("resize", () => {
+        setTimeout(() => {
+            exampleCarousel.initPosition();
+        }, 300);
+    });
 });
