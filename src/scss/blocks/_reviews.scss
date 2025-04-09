@@ -1,0 +1,48 @@
+.reviews {
+    .arrow_left_2,.arrow_rigth_2 {
+        border: 2px solid var(--button-orange);
+    }
+    .arrow_wrap span {
+        background-color: var(--button-orange);
+    }
+    .slider {
+        margin-top: 65px;
+        .slider__item {
+            padding: 50px 80px;
+            width: 100%;
+            background-color: var(--back-orange);
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 31px;
+            text-align: left;
+            // height: 100%;
+            span {
+                font-size: 34px;
+                line-height: 130%;
+            }
+            .reviews_item_divider {
+                position: relative;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                margin: 18px 0 15px 0;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 76px;
+                    height: 107px;
+                    background: url('../img/Giraffe.png') center bottom / contain no-repeat;
+                    right: 0;
+                    top: -107px;
+                }
+            }
+            .descr {
+                width: 70%;
+            }
+        }
+    }
+}
+
+.slider__wrapper_2 {
+    height: 380px;
+}

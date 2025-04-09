@@ -140,7 +140,7 @@ html {
     // }
 }
 // стрелки для карусели
-.arrow_left {
+.arrow_left, .arrow_left_2 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -181,7 +181,7 @@ html {
         }
     }
 }
-.arrow_rigth {
+.arrow_rigth, .arrow_rigth_2 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -212,7 +212,6 @@ html {
             }
             &:nth-child(2) {
                 width: 60px;
-                // transform: translateY(50%);
             }
             &:last-child {
                 width: 30px;
@@ -222,4 +221,25 @@ html {
             }
         }
     }
+}
+// карусель
+.slider {
+    display: grid;
+    grid-template-columns: 170px auto 170px;
+    align-items: center;
+}
+.slider__wrapper, .slider__wrapper_2 {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1340px;
+    position: relative;
+    overflow: hidden;
+}
+.slider__item {
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    flex-shrink: 0;
 }

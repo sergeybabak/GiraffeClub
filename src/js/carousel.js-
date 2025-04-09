@@ -20,8 +20,6 @@ export default class Carousel {
 
         this.setControl();                                                  // функция назаначает события нажатия на элементы управления (влево/вправо)
         this.stylesCentralItem = carousel.stylesCentralItem;
-        this.itemName = `item${Carousel.instanceCount++}`;                  // Уникальное имя item для текущей карусели
-        // this.itemName = carousel.itemName ? carousel.itemName : 'item';
         this.initPosition();  
     }
     
@@ -36,25 +34,27 @@ export default class Carousel {
         const leftCentral = central - Math.round(this.itemWidth / 2); // Центрируем centralItem
 
         Array.from(this.carouselContainer.children).forEach((item, index) => {
-            if (!this.itemsCreated) {  // Если это первый запуск
-                item.classList.add(`${this.itemName}-${index + 1}`); // Добавляем класс к элементу
-                
-                this.addOrUpdateRule(`${this.itemName}-${index + 1}`, 'position', 'absolute');
+            if (!this.itemsCreated) {
+                item.classList.add(`item-${index + 1}`); // Добавляем класс к элементу
+                this.addOrUpdateRule(`item-${index + 1}`, 'position', 'absolute');
                 if ((index == centralItem - 1) && this.stylesCentralItem) {
                     let styles = this.stylesCentralItem;
                     [...item.classList].forEach(i => {
                         for (let key in styles) {
-                            // удаляем стиль только если его значение равно значению центрального элемента карусели из параметра stylesCentral${this.itemName}
+                            // удаляем стиль только если его значение равно значению центрального элемента карусели из параметра stylesCentralItem
                             if (styles[key] == this.getStyleValue(i, key)) this.addOrUpdateRule(i, key);
-                            this.addOrUpdateRule(`${this.itemName}-${centralItem}`, key, styles[key]);
+                            this.addOrUpdateRule(`item-${centralItem}`, key, styles[key]);
                         }
                     });
                 }
             }
             this.positionArray[index] = leftCentral + (index + 1 - centralItem) * (this.itemWidth + this.gap);
-            this.addOrUpdateRule(`${this.itemName}-${index + 1}`, 'left', this.positionArray[index] + 'px');
+            // console.log('itemWidth: '+ this.itemWidth);
+            // console.log('leftCentral: '+ leftCentral);
+            this.addOrUpdateRule(`item-${index + 1}`, 'left', this.positionArray[index] + 'px');
 
         });
+        
         this.itemsCreated = true;
     }
 
@@ -96,7 +96,6 @@ export default class Carousel {
             try {
                 for (let rule of sheet.cssRules) { // Перебираем все CSS-правила
                     if (rule.selectorText === `.${className}`) { // Если нашли нужный класс
-                        if (!property) return true;
                         return rule.style[property] || null; // Возвращаем значение свойства или null
                     }
                 }
@@ -147,40 +146,45 @@ export default class Carousel {
 
         if (direction === 'left') {
             const clonedElement = firstElement.cloneNode(true); // Клонируем первый элемент
-            clonedElement.classList.replace(`${this.itemName}-1`, `${this.itemName}-${this.countItems}`);
+            clonedElement.classList.replace('item-1', `item-${this.countItems}`);
             this.carouselContainer.appendChild(clonedElement); // Добавляем копию в конец
-            this.copyClass(`${this.itemName}-1`, `${this.itemName}-0`);
+            this.copyClass('item-1', 'item-0');
 
             // 1️⃣ Сдвигаем все элементы влево
             Array.from(this.carouselContainer.children).forEach((item, i) => {
                 // исключительно для ЭТОЙ карусели. Уменьшается элемент с руководителем до общих размеров если он не главный с
                 item.dataset.index === "2" && item.classList.toggle('slider__item-great', i !== 2);
-                item.classList.replace(`${this.itemName}-${i + 1}`, `${this.itemName}-${i}`); // Заменяем класс
+                // console.log(item.className);
+                item.classList.replace(`item-${i + 1}`, `item-${i}`); // Заменяем класс
+                // item.className = `item-${i}`;
                 let newLeft = this.positionArray[i] - shift; // Вычисляем новое положение
-                this.addOrUpdateRule(`${this.itemName}-${i}`, 'left', `${newLeft}px`);
+                this.addOrUpdateRule(`item-${i}`, 'left', `${newLeft}px`);
             });
             
             setTimeout(() => {
                 this.carouselContainer.removeChild(this.carouselContainer.firstElementChild);
-                this.removeClass(`${this.itemName}-0`);
+                this.removeClass('item-0');
                 
                 this.carouselItems = this.carouselContainer.querySelectorAll(':scope > div'); // Обновляем NodeList
                 this.carouselArray = [...this.carouselItems]; // Обновляем массив
             }, 300);
         } else if (direction == 'right') {
             // 2️⃣ Вычисляем новую позицию (левее первого элемента)
+            // let lastElement = this.carouselContainer.lastElementChild;
             let newLeft = this.positionArray[0] - shift;
             const clonedElement = lastElement.cloneNode(true); // Клонируем последний элемент
 
             // 3️⃣ Задаем классу новый left перед тем, как изменять DOM
-            this.addOrUpdateRule(`${this.itemName}-${this.countItems}`, 'left', `${newLeft}px`);
+            this.addOrUpdateRule(`item-${this.countItems}`, 'left', `${newLeft}px`);
 
             setTimeout(() => {
                 Array.from(this.carouselContainer.children).forEach((item, i) => {
-                    this.addOrUpdateRule(`${this.itemName}-${i + 1}`, 'left', this.positionArray[i] + 'px');
+                    this.addOrUpdateRule(`item-${i + 1}`, 'left', this.positionArray[i] + 'px');
+                    // item.className = `item-${i + 1}`;
+                    // console.log(i+' -> '+(i + 1) % this.countItems);
                     let oldItem = i == 0 ? this.countItems : i;
                     let newItem = i + 1 === this.countItems ? this.countItems : (i + 1) % this.countItems;
-                    item.classList.replace(`${this.itemName}-${oldItem}`, `${this.itemName}-${i + 1}`); // Заменяем класс
+                    item.classList.replace(`item-${oldItem}`, `item-${i + 1}`); // Заменяем класс
                     // исключительно для ЭТОЙ карусели. Уменьшается элемент с руководителем до общих размеров если он не главный сейчас
                     item.dataset.index === "2" && item.classList.toggle('slider__item-great', i !== 1);
                 });
@@ -205,9 +209,6 @@ export default class Carousel {
         this.initPosition(); // Пересчитываем позиции после обновления параметров
     }
 }
-
-// Глобальный счетчик каруселей в проекте для создания уникального названия класса для управления координатами каждого элемента карусели
-Carousel.instanceCount = 0; 
 
 // запуск карусели из основного script.js
 /* import Carousel from "./carousel.js";
