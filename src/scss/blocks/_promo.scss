@@ -1,6 +1,8 @@
 .promo {
     position: relative;
+    max-width: 1920px;
     min-height: 1080px;
+    margin: 0 auto;
     background-color: var(--back-orange);
     overflow: hidden;
     padding: 0;

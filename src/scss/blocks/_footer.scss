@@ -1,0 +1,28 @@
+.footer {
+    padding: 0;
+}
+.footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 31px;
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+.footer__home {
+    font-size: 41.62px;
+    font-weight: 600;
+    line-height: 49px;
+}
+.footer__social {
+    justify-self: end;
+    &-img {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+}

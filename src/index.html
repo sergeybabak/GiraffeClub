@@ -6,12 +6,32 @@
     <title>Giraffe Club</title>
     <meta name="title" content="Вивчення іноземної мови">
     <meta name="description" content="Мовних шкіл багато - лідер один">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
     @@include('blocks/messages.html')
     
-    <section class="promo">
+    <section class="promo" id="home">
         <div class="triangle"></div>
 
         @@include('blocks/header.html')
@@ -39,7 +59,33 @@
     @@include('blocks/team.html')
 
     @@include('blocks/reviews.html')
-
+    
+    <footer class="footer">
+        <div class="container_orange">
+            <div class="footer__wrapper">
+                <a href="#home" class="footer__home">Giraffe Club</a>
+            <div class="footer__phone">
+                Номер телефону: <br>
+                <a href="tel:380508439168">+38 050 843 91 68</a>
+            </div>
+            <div class="footer__mail">
+                Email: <br>
+                <a href="mailto:info@giraffe.in.ua">info@giraffe.in.ua</a>
+            </div>
+            <div class="footer__address">
+                Адреса: <br>
+                м. Кропивницький, вул. Соборна, 1а
+            </div>
+            <div class="footer__social">
+                Соціальні мережі:
+                <div class="footer__social-img">
+                    <a href="#"><img src="icons/footer/facebook.png" alt=""></a>
+                    <a href="#"><img src="icons/footer/Instagram.png" alt=""></a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </footer>
     <script type="module" src="js/script.js"></script>
 </body>
 </html>
