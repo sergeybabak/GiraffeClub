@@ -243,3 +243,32 @@ html {
     transition: all 0.3s ease-in-out;
     flex-shrink: 0;
 }
+
+// стрелка вверх
+.pageup {
+    display: none;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        position: absolute;
+        background-color: var(--button-orange);
+        top: 26px;
+        &:first-child {
+            transform: rotate(45deg);
+            left: 24px;
+        }
+        &:last-child {
+            left: 5px;
+            transform: rotate(-45deg);
+        }
+    }
+}
